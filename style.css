@@ -120,6 +120,8 @@ a.underline {
 /* header */
 .header {
   margin-top: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .header__nav {
@@ -157,6 +159,7 @@ a.underline {
     align-items: center;
     text-align: left;
     gap: 32px;
+    margin-bottom: 90px;
   }
 
   .header__home{
@@ -182,26 +185,38 @@ a.underline {
   left: 50%;
   translate: -50%;
   display: block;
+  width: 9,875rem;
+  height: auto;
 }
 
-.hero__rings {
+.hero__rings { 
   position: absolute;
-  top:110px;
+  /*top:6.875rem;*/
+  top: 110px;
   right:50%;
   z-index: -1;
+  /*width: 33.125rem;*/
+  height: auto;
 }
 
 .hero__circle {
   position: absolute;
+  /*top: 10.5rem;*/
   top: 168px;
   right:0;
-  translate: 50%;
+  translate: 60%;
+  /*width: 8.0625rem;*/
+  /*height: 8.0625rem;*/
 }
 
 .hero__text {
   text-align: center;
   position: relative;
-  margin-top: 235px;
+  margin-top: 14.6875rem;
+}
+
+.hero__headline > br{
+  display: none;
 }
 
 h1 > span {
@@ -217,4 +232,40 @@ h1 > span {
 
 .hero__contact {
 
+}
+
+@media (min-width: 37.5em){ 
+  .hero__image {
+    height: auto;
+    top:-164px;
+    width: 18rem;
+    left: auto;
+    right: 0;
+    translate: 0;
+  }
+
+  .hero__text {
+    text-align: left;
+    margin-top: 0;
+    width: 57vw;
+  }
+
+  .hero__headline > br {
+    display: inline-block;
+  }
+
+  .hero__circle {
+    top: 245px;
+    translate: 65%;
+  }
+  
+  .hero__rings { 
+    top:85px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .hero__headline > br {
+    display: none;
+  }
 }
